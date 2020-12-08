@@ -30,7 +30,6 @@ Xamarin과 무관한 내용이므로 링크하지 않습니다.
 
 </pre>
 
-<br>
 https://blog.naver.com/gilitechmaster/221994280802 (1)
 <br>
 https://blog.naver.com/gilitechmaster/222017267997 (2)
@@ -53,10 +52,7 @@ https://blog.naver.com/gilitechmaster/222131564036 (5)
 한국에 자마린으로 IoT 웨어러블
 많이 만들어주세요 ^^.
 
-Wemos ESP32와 우노 HM10으
-통신으로 성공했습니다.
-
-클래식 블루투스는 안되는
-"BLE" 코드입니다~~
+Wemos ESP32와 우노 HM10은 통신성공했습니다.
+클래식 블루투스는 안되는 "BLE" 코드입니다~~
 
 </pre>
