@@ -9,12 +9,7 @@ Xabre Bluetooth LE plugin for Xamarin을 사용합니다.
 <br>
 https://github.com/xabre/xamarin-bluetooth-le
 <br><br>
-https://blog.naver.com/gilitechmaster/221994280802 (1)
-<br>
-https://blog.naver.com/gilitechmaster/222017267997 (2)
-<br>
-https://blog.naver.com/gilitechmaster/222131564036 (5)
-<br><br>
+
 <pre>
 
 관련 과정 글은 길이스타트업
@@ -22,6 +17,19 @@ Naver Blog 링크를 참고하시면 됩니다.
 
 (3)과 (4) 글은 ESP32에 관한 내용으로
 Xamarin과 무관한 내용이므로 링크하지 않습니다.
+
+</pre>
+
+<br>
+https://blog.naver.com/gilitechmaster/221994280802 (1)
+<br>
+https://blog.naver.com/gilitechmaster/222017267997 (2)
+<br>
+https://blog.naver.com/gilitechmaster/222131564036 (5)
+<br><br>
+
+
+<pre>
 
 소규모 사업자가 웨어러블 개발시
 개발자 구하기가 어려워서 사업 진전이
