@@ -5,7 +5,13 @@
 
 Xabre Bluetooth LE plugin for Xamarin을 사용합니다.
 
+</pre>
+
 https://github.com/xabre/xamarin-bluetooth-le
+
+
+<pre>
+
 
 관련 과정 글은 길이스타트업
 Naver Blog 링크를 참고하시면 됩니다.
