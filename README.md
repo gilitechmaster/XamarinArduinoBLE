@@ -6,7 +6,7 @@
 Xabre Bluetooth LE plugin for Xamarin을 사용합니다.
 
 </pre>
-
+<br>
 https://github.com/xabre/xamarin-bluetooth-le
 <br><br>
 https://blog.naver.com/gilitechmaster/221994280802 (1)
