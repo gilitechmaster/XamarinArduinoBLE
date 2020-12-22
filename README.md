@@ -58,3 +58,5 @@ Wemos ESP32와 우노 HM10은 통신성공했습니다.
 </pre>
 
 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMzFfMjEx/MDAxNjA0MDc4MTUwMzk4.nmEYkiw9SRAtrnfN12wrNG07F8xUaNBXvXqdtUvqa_Ag.9jRyKElsdkA8dYGiDPaHSBkzSN4Nv1lT-FbqlVczz7Ag.GIF.gilitechmaster/%25EC%259E%2590%25EB%25A7%2588%25EB%25A6%25B0_%25EC%2595%2584%25EB%2591%2590%25EC%259D%25B4%25EB%2585%25B8_5_1.gif?type=w800">
+<img src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMzFfMjI4/MDAxNjA0MDc4MzgzMDM5.Ne1qZ_7F7wvFcVTkIxe7vxTBAdX7PUnXtICm60D-Ryog.WeRSrncsrjYtzlIHDdY1kdsMS6AXmVkTqYgZRLOgQr0g.GIF.gilitechmaster/%25EC%259E%2590%25EB%25A7%2588%25EB%25A6%25B0_%25EC%2595%2584%25EB%2591%2590%25EC%259D%25B4%25EB%2585%25B8_5_2.gif?type=w800">
+<img src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMzFfMjM3/MDAxNjA0MDc4NDU3ODg0.573Vtp17WCDKgT_vDaN-HSYYAGs-RETYus5BSUGcrKUg.9cfB8wY5imxaXB_mJWcUBV47az1rlqq5-gb51t0iyhEg.GIF.gilitechmaster/%25EC%259E%2590%25EB%25A7%2588%25EB%25A6%25B0_%25EC%2595%2584%25EB%2591%2590%25EC%259D%25B4%25EB%2585%25B8_5_3.gif?type=w800">
