@@ -58,5 +58,5 @@ Wemos ESP32와 우노 HM10은 통신성공했습니다.
 </pre>
 
 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMzFfMTQg/MDAxNjA0MDgzNzQ4NDQz.REmKTFElWLPEiGJxBpHjjgwHSH_nzAFg-47G_fY5oAog.BuvCOZdDulMB04bhZbD3GtCJTgXFeCf7peFm7NHi3WEg.GIF.gilitechmaster/%25EC%259E%2590%25EB%25A7%2588%25EB%25A6%25B0_%25EC%2595%2584%25EB%2591%2590%25EC%259D%25B4%25EB%2585%25B8_5_5.gif?type=w800">
-<p.
+<p>
 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMzFfMTcw/MDAxNjA0MDgzNzA4OTI4.uNCYJxhXN23sl_G99sBFliXM2_qujV7cOHZCPB2DVOog.DIlOjNDQ_TTA0fb5m44c7OGJ0LjAwpSZLKimrttM6IYg.GIF.gilitechmaster/%25EC%259E%2590%25EB%25A7%2588%25EB%25A6%25B0_%25EC%2595%2584%25EB%2591%2590%25EC%259D%25B4%25EB%2585%25B8_5_7.gif?type=w800">
