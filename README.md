@@ -70,8 +70,14 @@ Wemos ESP32와 우노 HM10은 통신성공했습니다.
 코드만 독자적으로 임베디드 하여 IoT제품으로
 출시하여 사용가능한 어플입니다.
 
+KC인증 조회는 아래 사이트로 확인하면 됩니다.
 
 </pre>
+
+https://www.rra.go.kr/ko/license/A_c_search_view.do?cpage=2&category=&firm=&model_no=esp32&equip=&app_no=&maker=&nation=&fromdate=20160331&todate=20210401
+<br>
+https://www.espressif.com/en/support/documents/certificates?keys=kcc
+<br><br>
 
 <pre>
 
