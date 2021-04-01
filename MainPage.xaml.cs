@@ -6,6 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
+
+//Nuget패키지에서 Plugin.BLE 설치
+//https://github.com/xabre/xamarin-bluetooth-le
+
 using Plugin.BLE;
 using Plugin.BLE.Abstractions.Contracts;
 using Plugin.BLE.Abstractions.Exceptions;
@@ -15,9 +19,6 @@ namespace BLE_Test9
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-
-        //자세한 설명은 Xabre 깃허브 페이지 참고
-        //https://github.com/xabre/xamarin-bluetooth-le
 
         IAdapter adapter;
         IBluetoothLE bluetoothBLE;
@@ -36,6 +37,15 @@ namespace BLE_Test9
             adapter = CrossBluetoothLE.Current.Adapter;
             list = new ObservableCollection<IDevice>();
             DevicesList.ItemsSource = list;
+            
+            //스캔목록list은 ListView로 구현
+            //ListView는 스크롤이 가능한 데이터 목록이다.
+            //https://docs.microsoft.com/ko-kr/xamarin/xamarin-forms/user-interface/listview/
+
+            //자마린 폼즈 ListView ItemSource
+            //ObservableCollection 인스턴스가 데이터로 목록에 채워짐 
+            //https://docs.microsoft.com/ko-kr/xamarin/xamarin-forms/user-interface/listview/data-and-databinding
+
         }
         
         // C# 비동기함수 async와 await
