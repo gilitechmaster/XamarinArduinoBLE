@@ -55,6 +55,18 @@ https://blog.naver.com/gilitechmaster/222131564036 (5)
 Wemos ESP32와 우노 HM10은 통신성공했습니다.
 클래식 블루투스는 안되는 "BLE" 코드입니다~~
 
+<pre>
+
+Assets 폴더에 TTF폰트는 배민연성체입니다.
+
+임베딩 및 상업적 이용이 가능하며
+링크를 참고하시길 바랍니다.
+
+</pre>
+
+https://www.woowahan.com/#/fonts
+<br><br>
+
 </pre>
 
 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMzFfMjEx/MDAxNjA0MDc4MTUwMzk4.nmEYkiw9SRAtrnfN12wrNG07F8xUaNBXvXqdtUvqa_Ag.9jRyKElsdkA8dYGiDPaHSBkzSN4Nv1lT-FbqlVczz7Ag.GIF.gilitechmaster/%25EC%259E%2590%25EB%25A7%2588%25EB%25A6%25B0_%25EC%2595%2584%25EB%2591%2590%25EC%259D%25B4%25EB%2585%25B8_5_1.gif?type=w800">
