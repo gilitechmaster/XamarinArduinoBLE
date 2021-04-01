@@ -65,10 +65,12 @@ Wemos ESP32와 우노 HM10은 통신성공했습니다.
 
 예를들면, HC06은 본 어플과 통신이 안됩니다.
 
-즉, UNO - Nano는 하드웨어 도면이 상업적 이용
-가능하므로 "통신모듈은 바꾸지 않고", 센서랑
-코드만 독자적으로 임베디드 하여 IoT제품으로
-출시하여 사용가능한 어플입니다.
+UNO - Nano는 하드웨어 도면이 상업적 이용
+가능하므로 "통신모듈은 바꾸지 않고"
+
+센서와 전자공학 코드만 독자적으로
+임베디드 하여 IoT제품으로 출시하여
+사용가능한 어플입니다.
 
 Espressif 통신모듈의 KC인증 조회는
 아래 사이트 로 확인하면 됩니다.
@@ -82,7 +84,7 @@ ESP32-WROOM-32E는 어플테스트를 안해보았으나
 </pre>
 
 https://www.rra.go.kr/ko/license/A_c_search_view.do?cpage=2&category=&firm=&model_no=esp32&equip=&app_no=&maker=&nation=&fromdate=20160331&todate=20210401
-<br>
+<br><br
 https://www.espressif.com/en/support/documents/certificates?keys=kcc
 <br><br>
 
@@ -100,7 +102,7 @@ Xamarin Visual Studio TTF 추가는
 </pre>
 
 https://www.woowahan.com/#/fonts
-<br>
+<br><br
 https://www.evernote.com/shard/s514/sh/eaab312d-f9ee-4425-a939-4d245d380c66/488853f93a1d3438ae98a0741501405a
 <br><br>
 
