@@ -37,6 +37,11 @@ namespace BLE_Test9
             list = new ObservableCollection<IDevice>();
             DevicesList.ItemsSource = list;
         }
+        
+        // C# 비동기함수 async와 await
+        //https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/async/
+
+        
         private async void searchDevice(object sender, EventArgs e)
         {
             if (bluetoothBLE.State == BluetoothState.Off) //블루투스 상태확인
@@ -128,6 +133,10 @@ namespace BLE_Test9
             {
             }
         }
+        
+        //IsNullOrEmpty메서드는 널인지 공백인지 확인한다.
+        //https://docs.microsoft.com/ko-kr/dotnet/api/system.string.isnullorempty?view=net-5.0
+
         private async void WriteButton_Clicked(object sender, EventArgs e)
         {
             try
