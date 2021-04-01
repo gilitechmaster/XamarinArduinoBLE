@@ -83,6 +83,8 @@ Assets 폴더에 TTF폰트는 배민연성체입니다.
 </pre>
 
 https://www.woowahan.com/#/fonts
+<br>
+https://www.evernote.com/shard/s514/sh/eaab312d-f9ee-4425-a939-4d245d380c66/488853f93a1d3438ae98a0741501405a
 <br><br>
 
 
