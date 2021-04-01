@@ -43,8 +43,6 @@
 
 
             <ListView x:Name="DevicesList"
-                      IsPullToRefreshEnabled="true"
-                      CachingStrategy="RecycleElement"
                       ItemSelected="DevicesList_OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
