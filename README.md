@@ -4,6 +4,13 @@
 아두이노 BLE 데이터 통신을 구현하는 전체 코드입니다.
 
 Xabre Bluetooth LE plugin for Xamarin을 사용합니다.
+</pre>
+
+
+https://github.com/xabre/xamarin-bluetooth-le
+<br><br>
+
+<pre>
 
 Xabre 플러그인은
 Apache 2.0 라이센스를 사용하며
@@ -37,9 +44,6 @@ IoT = 스마트 = 물리현상 함수화는
 많이 만들어주세요 ^^.
 
 </pre>
-
-https://github.com/xabre/xamarin-bluetooth-le
-<br><br>
 
 <pre>
 
