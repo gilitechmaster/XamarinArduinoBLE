@@ -84,7 +84,7 @@ ESP32-WROOM-32E는 어플테스트를 안해보았으나
 </pre>
 
 https://www.rra.go.kr/ko/license/A_c_search_view.do?cpage=2&category=&firm=&model_no=esp32&equip=&app_no=&maker=&nation=&fromdate=20160331&todate=20210401
-<br><br
+<br><br>
 https://www.espressif.com/en/support/documents/certificates?keys=kcc
 <br><br>
 
@@ -102,7 +102,7 @@ Xamarin Visual Studio TTF 추가는
 </pre>
 
 https://www.woowahan.com/#/fonts
-<br><br
+<br><br>
 https://www.evernote.com/shard/s514/sh/eaab312d-f9ee-4425-a939-4d245d380c66/488853f93a1d3438ae98a0741501405a
 <br><br>
 
