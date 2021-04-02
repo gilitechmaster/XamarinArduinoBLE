@@ -29,7 +29,7 @@ namespace BLE_Test9
         {
 
             //Xabre는 바닐라 혹은 Mvvmcross로 작업가능
-            //MvvM은 데이터를 바인딩해서 뷰하는 모델
+            //MvvM은 데이터를 바인딩해서 GUI 뷰하는 모델
             //https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EB%B7%B0%EB%AA%A8%EB%8D%B8
             
             //바닐라는 Non Mvvmcross로써 순수 자마린
