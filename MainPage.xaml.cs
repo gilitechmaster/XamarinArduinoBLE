@@ -42,7 +42,7 @@ namespace BLE_Test9
             DevicesList.ItemsSource = list;
             
             //스캔목록list은 ListView로 구현
-            //ListView는 스크롤이 가능한 데이터 목록이다.
+            //ListView는 스크롤이 가능한 데이터 목록입니다.
             //https://docs.microsoft.com/ko-kr/xamarin/xamarin-forms/user-interface/listview/
 
             //자마린 폼즈 ListView ItemSource
