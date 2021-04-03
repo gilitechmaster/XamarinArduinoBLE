@@ -28,11 +28,11 @@ namespace BLE_Test9
         public MainPage()
         {
 
-            //Xabre는 바닐라 혹은 Mvvmcross로 작업가능
-            //MvvM은 데이터를 바인딩해서 GUI 뷰하는 모델
+            //Xabre는 바닐라 혹은 MVVM Cross로 작업가능
+            //MVVM은 데이터를 바인딩해서 GUI 뷰하는 모델
             //https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EB%B7%B0%EB%AA%A8%EB%8D%B8
             
-            //바닐라는 Non Mvvmcross로써 순수 자마린
+            //바닐라는 Non MVVM Cross로써 순수자마린
             //아래는 바닐라로 설정하는 코드입니다.
 
             InitializeComponent();
