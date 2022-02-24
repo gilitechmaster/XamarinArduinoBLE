@@ -95,21 +95,8 @@ UNO - Nano는 하드웨어 도면이 상업적 이용
 임베디드 하여 IoT제품으로 출시하여
 사용가능한 어플입니다.
 
-Espressif 통신모듈의 KC인증 조회는
-아래 사이트 로 확인하면 됩니다.
-
-현재 어플은 ESP32-WROOM-32로 작업했으나
-KC인증은 EPS32-WROOM-32E가 적합인증 되있으며
-ESP32-WROOM-32E는 어플테스트를 안해보았으나
-(이론적으로) 문제 없이 통신될거라고 봅니다.
-
-
 </pre>
 
-https://www.rra.go.kr/ko/license/A_c_search_view.do?cpage=2&category=&firm=&model_no=esp32&equip=&app_no=&maker=&nation=&fromdate=20160331&todate=20210401
-<br><br>
-https://www.espressif.com/en/support/documents/certificates?keys=kcc
-<br><br>
 
 <pre>
 
