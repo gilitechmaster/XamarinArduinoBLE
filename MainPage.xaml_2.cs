@@ -85,15 +85,6 @@ namespace BLE_Test9
             try
             {
                 var parameters = new ConnectParameters(forceBleTransport: true); // gattcallback 133 에러 방지
-
-                //gattcallback 133 에러는 개발자에 따라서 다른 환경에서 발생할 수 있다고 알고 있으나
-                //어쩌면 gattcallback 133 에러는 다른 개발자들도 자주 발생하는 버그일 수 있다.
-                //본 코드를 편집작성한 길이스타트업 대표 본인은 독학으로 혼자 작성한 코드라서 타인의 사례를 모른다.
-                //현재 코드에서 사용된 기능은 대략 4-6개 정도이지만
-                //기능 1개씩만, 구현되어 파생된 BLE 코드를 통합하여 완성했기 때문이다.
-                //본 코드를 완성하는데 도움이 된 개발자 글 중에 한국 글은 없으며
-                //일본 스페인? (스페인어 독일어 차이를 잘 모르며 ESP에서 독일 문서를 읽은듯 하다.) 아랍? 등의 국가에서 코드문서를 읽었다.
-
                 await adapter.ConnectToDeviceAsync(device, parameters); // 장치연결 성공
                 await DisplayAlert("연결", "상태 : " + device.State, "네");
             }
