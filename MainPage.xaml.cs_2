@@ -1,0 +1,214 @@
+//현재 코드는 Xamarin Forms를 통해서 제작한 앱으로 아두이노 BLE 통신을 수행한다.
+//BLE(블루투스 4.0 이후)는 Bluetooth classic(블루투스 2.0)과 다르다.
+//여기서 코드는 BLE는 ESP32를 기본으로 작성하였으나, HM10까지 구현해내었다고 기억을 한다.
+//같은 BLE 모듈(통신센서)이라해도 칩의 버전 제조사(칩의 HWSW, 임베디드 세팅 상태)에 따라서 앱에 사용될 코드는 바뀐다.
+
+//본 코드로 메이커산업 발전을 기대한다.
+//스마트제품 만드는데 누구나 써도 되는 어플코드이므로
+//개발비용은 약 1000만원 ~ 2000만원으로 책정되지만
+//경제적 가치는 수 억원에 해당할 것이다.
+
+//1인 2000만원에 개발할 것을 무료로 오픈함에 1인 메이커 5명이라도 사용하면 1억 원이다.
+
+//개발비용은 3000만원으로 하기에 GPS등 다른 기능과 연결이 부진하고, 어플에 일련 버그가 있다.
+//즉 최적화가 아직 부족하므로 2000만원으로 계산할 수 있으나
+//1인 프리랜서 또한 고려할시 1000만원으로 계산할 수 있다.
+
+//본 코드의 어플은 BLE 모든 기능을 구현한다.
+
+using System;
+//using System.Collections.Generic;
+using System.ComponentModel;
+//using System.Linq;
+using System.Text;
+//using System.Threading.Tasks;
+using Xamarin.Forms;
+using System.Collections.ObjectModel;
+
+//Nuget패키지에서 Plugin.BLE 설치
+//https://github.com/xabre/xamarin-bluetooth-le
+
+using Plugin.BLE;
+using Plugin.BLE.Abstractions.Contracts;
+using Plugin.BLE.Abstractions.Exceptions;
+using Plugin.BLE.Abstractions;
+namespace BLE_Test9
+{
+    [DesignTimeVisible(false)]
+    public partial class MainPage : ContentPage
+    {
+
+        IAdapter adapter;
+        IBluetoothLE bluetoothBLE;
+        ObservableCollection<IDevice> list;
+        IDevice device;
+
+        public MainPage()
+        {
+
+            //Xabre는 바닐라 혹은 Mvvmcross로 작업가능
+            //MvvM은 데이터를 바인딩해서 GUI 뷰하는 모델
+            //https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EB%B7%B0%EB%AA%A8%EB%8D%B8
+
+            //바닐라는 Non Mvvmcross로써 순수 자마린
+            //아래는 바닐라로 설정하는 코드입니다.
+
+            InitializeComponent();
+            bluetoothBLE = CrossBluetoothLE.Current;
+            adapter = CrossBluetoothLE.Current.Adapter;
+            list = new ObservableCollection<IDevice>();
+            DevicesList.ItemsSource = list;
+
+            //스캔목록list은 ListView로 구현
+            //ListView는 스크롤이 가능한 데이터 목록이다.
+            //https://docs.microsoft.com/ko-kr/xamarin/xamarin-forms/user-interface/listview/
+
+            //자마린 폼즈 ListView ItemSource
+            //ObservableCollection 인스턴스가 데이터로 목록에 채워짐 
+            //https://docs.microsoft.com/ko-kr/xamarin/xamarin-forms/user-interface/listview/data-and-databinding
+
+        }
+
+        // C# 비동기함수 async와 await
+        //https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/async/
+
+
+        private async void searchDevice(object sender, EventArgs e)
+        {
+            if (bluetoothBLE.State == BluetoothState.Off) //블루투스 상태확인
+            {
+                await DisplayAlert("알림", "블루투스가 켜져있지 않습니다.", "OK");
+            }
+            else
+            {
+                list.Clear();
+                adapter.ScanTimeout = 3000; // 스캔 버튼 클릭시 반응속도
+                adapter.ScanMode = ScanMode.Balanced;
+                adapter.DeviceDiscovered += (obj, a) =>
+                {
+                    if (!list.Contains(a.Device))
+                        list.Add(a.Device);
+                };
+                await adapter.StartScanningForDevicesAsync(); //스캔시작
+            }
+        }
+
+        private async void DevicesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            device = DevicesList.SelectedItem as IDevice; // 자마린폼즈 ListView ItemSelected
+            var result = await DisplayAlert("스캔", "이 기기에 연결하시겠습니까?", "연결", "취소");
+            if (!result)
+                return;
+            await adapter.StopScanningForDevicesAsync(); //스캔종료
+            try
+            {
+                var parameters = new ConnectParameters(forceBleTransport: true); // gattcallback 133 에러 방지
+
+                //gattcallback 133 에러는 개발자에 따라서 다른 환경에서 발생할 수 있다고 알고 있으나
+                //어쩌면 gattcallback 133 에러는 다른 개발자들도 자주 발생하는 버그일 수 있다.
+                //본 코드를 편집작성한 길이스타트업 대표 본인은 독학으로 혼자 작성한 코드라서 타인의 사례를 모른다.
+                //현재 코드에서 사용된 기능은 대략 4-6개 정도이지만
+                //기능 1개씩만, 구현되어 파생된 BLE 코드를 통합하여 완성했기 때문이다.
+                //본 코드를 완성하는데 도움이 된 개발자 글 중에 한국 글은 없으며
+                //일본 스페인? (스페인어 독일어 차이를 잘 모르며 ESP에서 독일 문서를 읽은듯 하다.) 아랍? 등의 국가에서 코드문서를 읽었다.
+
+                await adapter.ConnectToDeviceAsync(device, parameters); // 장치연결 성공
+                await DisplayAlert("연결", "상태 : " + device.State, "네");
+            }
+            catch (DeviceConnectionException ex) //장치연결 실패
+            {
+                await DisplayAlert("에러", ex.Message, "네");
+            }
+        }
+        private async void Disconnect(object sender, EventArgs e)
+        {
+            try
+            {
+                await adapter.DisconnectDeviceAsync(device); //장치연결 해제
+                await DisplayAlert("종료", "연결이 해제되었습니다.", "네");
+            }
+            catch
+            {
+            }
+        }
+        private async void KnownDevice(object sender, EventArgs e)
+        {
+            try
+            {
+                await adapter.ConnectToKnownDeviceAsync(guid, cancellationToken); //장치연결 해제
+                await DisplayAlert("종료", "연결이 해제되었습니다.", "네");
+            }
+            catch
+            {
+            }
+        }
+
+        //블루투스는 서비스와 특성으로 데이터를 교환한다.
+        //https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt
+
+        //Parse를 통해 문자열-숫자를 바꿉니다.
+        //https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number
+
+        //Guid구조체 MSDN 링크
+        //https://docs.microsoft.com/ko-kr/dotnet/api/system.guid?view=net-5.0
+
+        //Guid.Parse메서드 MSDN 링크
+        //https://docs.microsoft.com/ko-kr/dotnet/api/system.guid.parse?view=net-5.0
+
+        //UTF8Encoding 클래스 MSDN 링크
+        //https://docs.microsoft.com/ko-kr/dotnet/api/system.text.utf8encoding?view=net-5.0
+
+        //ReadAsync 비동기함수 MSDN 링크
+        //MS에서 비동기 함수 구현에 많은 노력을 했다고 합니다.
+        //그러므로 우리는 유용히 사용하도록 노력해봅니다.
+        //https://docs.microsoft.com/ko-kr/dotnet/api/system.io.stream.readasync?view=net-5.0
+
+        private async void ReadButton_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                //UUID와 Guid는 동일하며, 서비스의 고유 ID이다.
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b"));
+                //ServiceId, ESP32 UUID 적용, ESP32와 값이 달라도 scan connect 잘된다.
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("{beb5483e-36e1-4688-b7f5-ea07361b26a8}"));
+                    //ManufacturerName, ESP32 UUID 적용, ESP32와 값이 달라도 scan connect 잘된다.
+                    if (characteristic != null)
+                    {
+                        var bytes = await characteristic.ReadAsync();
+                        var str = Encoding.UTF8.GetString(bytes); //데이터를 읽을 때 값을 문자로 인코딩
+                        readdata.Text = str;
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        //IsNullOrEmpty메서드는 널인지 공백인지 확인한다.
+        //https://docs.microsoft.com/ko-kr/dotnet/api/system.string.isnullorempty?view=net-5.0
+
+        private async void WriteButton_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("{beb5483e-36e1-4688-b7f5-ea07361b26a8}")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata.Text) ? "전송" : writedata.Text);
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+    }
+}
