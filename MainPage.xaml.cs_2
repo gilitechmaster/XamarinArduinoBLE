@@ -131,18 +131,6 @@ namespace BLE_Test9
             {
             }
         }
-        private async void KnownDevice(object sender, EventArgs e)
-        {
-            try
-            {
-                await adapter.ConnectToKnownDeviceAsync(guid, cancellationToken); //장치연결 해제
-                await DisplayAlert("종료", "연결이 해제되었습니다.", "네");
-            }
-            catch
-            {
-            }
-        }
-
         //블루투스는 서비스와 특성으로 데이터를 교환한다.
         //https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt
 
