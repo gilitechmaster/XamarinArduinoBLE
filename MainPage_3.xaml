@@ -1,4 +1,4 @@
-  <?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -72,8 +72,7 @@
                     TextColor="White"
                     Clicked="Disconnect"
                     BackgroundColor="Color.Transparent"/>
-
-
+            
             <BoxView Color="White"
              CornerRadius="10"
              WidthRequest="300"
@@ -81,24 +80,407 @@
              VerticalOptions="Center"
              HorizontalOptions="Center" />
 
-            <Button x:Name="writedata"
-                    Text="켜기"
+            <Grid ColumnSpacing="10"
+                  RowSpacing="10"
+                  Margin="50">
+                
+                <Button x:Name="writedata1"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text=" "
                     FontFamily="{StaticResource BMFont}"
                     Margin="1"
                     FontSize="25"
                     TextColor="White"
-                    Clicked="WriteButton_Clicked"
-                    BackgroundColor="Color.Transparent"/>
+                    Clicked="WriteButton_Clicked_1"
+                    BackgroundColor="Black"/>
 
 
-            <Button x:Name="writedata2"
-                    Text="끄기"
+                <Button x:Name="writedata2"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text=" "
                     FontFamily="{StaticResource BMFont}"
                     Margin="1"
                     FontSize="25"
                     TextColor="White"
                     Clicked="WriteButton_Clicked_2"
-                    BackgroundColor="Color.Transparent"/>
+                    BackgroundColor="White"/>
+
+                <Button x:Name="writedata3"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_3"
+                    BackgroundColor="MistyRose"/>
+
+                <Button x:Name="writedata4"
+                        Grid.Row="0"
+                    Grid.Column="3"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_4"
+                    BackgroundColor="Beige"/>
+
+                <Button x:Name="writedata5"
+                        Grid.Row="0"
+                    Grid.Column="4"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_5"
+                    BackgroundColor="AliceBlue"/>
+
+                <Button x:Name="writedata6"
+                        Grid.Row="0"
+                    Grid.Column="5"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_6"
+                    BackgroundColor="Azure"/>
+
+                <Button x:Name="writedata7"
+                        Grid.Row="0"
+                    Grid.Column="6"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_7"
+                    BackgroundColor="Ivory"/>
+
+                <Button x:Name="writedata8"
+                        Grid.Row="0"
+                    Grid.Column="7"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_8"
+                    BackgroundColor="DarkRed"/>
+
+                <Button x:Name="writedata9"
+                        Grid.Row="0"
+                    Grid.Column="8"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_9"
+                    BackgroundColor="Red"/>
+
+                <Button x:Name="writedata10"
+                        Grid.Row="1"
+                    Grid.Column="0"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_10"
+                    BackgroundColor="LightCoral"/>
+
+                <Button x:Name="writedata11"
+                        Grid.Row="1"
+                    Grid.Column="1"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_11"
+                    BackgroundColor="LightSalmon"/>
+
+                <Button x:Name="writedata12"
+                        Grid.Row="1"
+                    Grid.Column="2"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_12"
+                    BackgroundColor="DarkOrange"/>
+
+                <Button x:Name="writedata13"
+                        Grid.Row="1"
+                    Grid.Column="3"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_13"
+                    BackgroundColor="Orange"/>
+
+                <Button x:Name="writedata14"
+                        Grid.Row="1"
+                    Grid.Column="4"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_14"
+                    BackgroundColor="Yellow"/>
+
+                <Button x:Name="writedata15"
+                        Grid.Row="1"
+                    Grid.Column="5"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_15"
+                    BackgroundColor="Gold"/>
+
+                <Button x:Name="writedata16"
+                        Grid.Row="1"
+                    Grid.Column="6"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_16"
+                    BackgroundColor="DarkKhaki"/>
+
+                <Button x:Name="writedata17"
+                        Grid.Row="1"
+                    Grid.Column="7"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_17"
+                    BackgroundColor="LightGoldenrodYellow"/>
+
+                <Button x:Name="writedata18"
+                        Grid.Row="1"
+                    Grid.Column="8"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_18"
+                    BackgroundColor="Green"/>
+
+                <Button x:Name="writedata19"
+                        Grid.Row="2"
+                    Grid.Column="0"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_19"
+                    BackgroundColor="SeaGreen"/>
+
+                <Button x:Name="writedata20"
+                        Grid.Row="2"
+                    Grid.Column="1"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_20"
+                    BackgroundColor="Olive"/>
+
+                <Button x:Name="writedata21"
+                        Grid.Row="2"
+                    Grid.Column="2"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_21"
+                    BackgroundColor="SpringGreen"/>
+
+                <Button x:Name="writedata22"
+                        Grid.Row="2"
+                    Grid.Column="3"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_22"
+                    BackgroundColor="YellowGreen"/>
+
+                <Button x:Name="writedata23"
+                        Grid.Row="2"
+                    Grid.Column="4"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_23"
+                    BackgroundColor="Blue"/>
+
+                <Button x:Name="writedata24"
+                        Grid.Row="2"
+                    Grid.Column="5"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_24"
+                    BackgroundColor="MidnightBlue"/>
+
+                <Button x:Name="writedata25"
+                        Grid.Row="2"
+                    Grid.Column="6"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_25"
+                    BackgroundColor="DodgerBlue"/>
+
+                <Button x:Name="writedata26"
+                        Grid.Row="2"
+                    Grid.Column="7"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_26"
+                    BackgroundColor="DeepSkyBlue"/>
+
+                <Button x:Name="writedata27"
+                        Grid.Row="2"
+                    Grid.Column="8"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_27"
+                    BackgroundColor="LightSteelBlue"/>
+
+                <Button x:Name="writedata28"
+                        Grid.Row="3"
+                    Grid.Column="0"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_28"
+                    BackgroundColor="LightSeaGreen"/>
+
+                <Button x:Name="writedata29"
+                        Grid.Row="3"
+                    Grid.Column="1"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_29"
+                    BackgroundColor="Cyan"/>
+
+                <Button x:Name="writedata30"
+                        Grid.Row="3"
+                    Grid.Column="2"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_30"
+                    BackgroundColor="Aquamarine"/>
+
+                <Button x:Name="writedata31"
+                        Grid.Row="3"
+                    Grid.Column="3"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_31"
+                    BackgroundColor="Purple"/>
+                
+                <Button x:Name="writedata32"
+                        Grid.Row="3"
+                    Grid.Column="4"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_32"
+                    BackgroundColor="DarkViolet"/>
+
+                <Button x:Name="writedata33"
+                        Grid.Row="3"
+                    Grid.Column="5"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_33"
+                    BackgroundColor="Magenta"/>
+
+                <Button x:Name="writedata34"
+                        Grid.Row="3"
+                    Grid.Column="6"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_34"
+                    BackgroundColor="SlateBlue"/>
+
+                <Button x:Name="writedata35"
+                        Grid.Row="3"
+                    Grid.Column="7"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_35"
+                    BackgroundColor="Violet"/>
+
+                <Button x:Name="writedata36"
+                        Grid.Row="3"
+                    Grid.Column="8"
+                    Text=" "
+                    FontFamily="{StaticResource BMFont}"
+                    Margin="1"
+                    FontSize="25"
+                    TextColor="White"
+                    Clicked="WriteButton_Clicked_36"
+                    BackgroundColor="Silver"/>
+            </Grid>
 
         </StackLayout>
     </ContentPage.Content>
