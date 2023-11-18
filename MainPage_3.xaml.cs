@@ -1,4 +1,5 @@
 //MainPage_3.xaml과 연결되며 값을 입력하는 방식이 아닌 버튼으로 값을 전송하는 방식이다.
+//버튼 36개로 36가지 색상을 제공한다.
 
 using System;
 //using System.Collections.Generic;
@@ -129,7 +130,7 @@ namespace BLE_Test9
         //IsNullOrEmpty메서드는 널인지 공백인지 확인한다.
         //https://docs.microsoft.com/ko-kr/dotnet/api/system.string.isnullorempty?view=net-5.0
 
-        private async void WriteButton_Clicked(object sender, EventArgs e)
+        private async void WriteButton_Clicked_1(object sender, EventArgs e)
         {
             try
             {
@@ -139,8 +140,8 @@ namespace BLE_Test9
                     var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
                     if (characteristic != null)
                     {
-                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata.Text) ? "전송" : "11");
-                        //버튼 값 11 ESP32로 보내기
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata1.Text) ? "전송" : "1");
+                        //버튼 값 1 ESP32로 보내기
                         //데이터를 쓰기할 때 문자를 값으로 인코딩
                         var bytes = await characteristic.WriteAsync(senddata);
                     }
@@ -160,7 +161,687 @@ namespace BLE_Test9
                     var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
                     if (characteristic != null)
                     {
-                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata2.Text) ? "전송" : "1");
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata2.Text) ? "전송" : "11");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_3(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata3.Text) ? "전송" : "111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_4(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata4.Text) ? "전송" : "1111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_5(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata5.Text) ? "전송" : "11111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_6(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata6.Text) ? "전송" : "111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_7(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata7.Text) ? "전송" : "1111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_8(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata8.Text) ? "전송" : "11111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_9(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata9.Text) ? "전송" : "111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_10(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata10.Text) ? "전송" : "1111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_11(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata11.Text) ? "전송" : "11111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_12(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata12.Text) ? "전송" : "111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_13(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata13.Text) ? "전송" : "1111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_14(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata14.Text) ? "전송" : "11111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_15(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata15.Text) ? "전송" : "111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_16(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata16.Text) ? "전송" : "1111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_17(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata17.Text) ? "전송" : "11111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_18(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata18.Text) ? "전송" : "111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_19(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata19.Text) ? "전송" : "1111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_20(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata20.Text) ? "전송" : "11111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_21(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata21.Text) ? "전송" : "111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_22(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata22.Text) ? "전송" : "1111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_23(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata23.Text) ? "전송" : "11111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_24(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata24.Text) ? "전송" : "111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_25(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata25.Text) ? "전송" : "1111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_26(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata26.Text) ? "전송" : "11111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_27(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata27.Text) ? "전송" : "111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_28(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata28.Text) ? "전송" : "1111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_29(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata29.Text) ? "전송" : "11111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_30(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata30.Text) ? "전송" : "111111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_31(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata31.Text) ? "전송" : "1111111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_32(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata32.Text) ? "전송" : "11111111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_33(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata33.Text) ? "전송" : "111111111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_34(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata34.Text) ? "전송" : "1111111111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_35(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata35.Text) ? "전송" : "11111111111111111111111111111111111");
+                        //데이터를 쓰기할 때 문자를 값으로 인코딩
+                        var bytes = await characteristic.WriteAsync(senddata);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+        private async void WriteButton_Clicked_36(object sender, EventArgs e)
+        {
+            try
+            {
+                var service = await device.GetServiceAsync(Guid.Parse("4fafc201-1fb5-459e-8fcc-c5c9c331914b")); //ServiceId, ESP32 UUID 적용
+                if (service != null)
+                {
+                    var characteristic = await service.GetCharacteristicAsync(Guid.Parse("beb5483e-36e1-4688-b7f5-ea07361b26a8")); //Dataexchange, ESP32 UUID 적용
+                    if (characteristic != null)
+                    {
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata36.Text) ? "전송" : "111111111111111111111111111111111111");
                         //데이터를 쓰기할 때 문자를 값으로 인코딩
                         var bytes = await characteristic.WriteAsync(senddata);
                     }
