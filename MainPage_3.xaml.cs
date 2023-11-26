@@ -67,8 +67,8 @@ namespace BLE_Test9
             else
             {
                 list.Clear();
-                adapter.ScanTimeout = 3000; // 스캔 버튼 클릭시 반응속도
-                adapter.ScanMode = ScanMode.Balanced;
+                //adapter.ScanTimeout = 3000; // 스캔 버튼 클릭시 반응속도
+                //adapter.ScanMode = ScanMode.Balanced; //버그 때문에 삭제하였다.
                 adapter.DeviceDiscovered += (obj, a) =>
                 {
                     if (!list.Contains(a.Device))
