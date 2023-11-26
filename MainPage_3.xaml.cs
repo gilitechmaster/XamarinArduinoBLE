@@ -1,5 +1,5 @@
 //MainPage_3.xaml과 연결되며 값을 입력하는 방식이 아닌 버튼으로 값을 전송하는 방식이다.
-//버튼 36개로 36가지 색상을 제공한다.
+//버튼 24개로 24가지 색상을 제공한다.
 
 using System;
 //using System.Collections.Generic;
