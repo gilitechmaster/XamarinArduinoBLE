@@ -68,7 +68,7 @@ namespace BLE_Test9
             {
                 list.Clear();
                 //adapter.ScanTimeout = 3000;
-                //adapter.ScanMode = ScanMode.Balanced;
+                //adapter.ScanMode = ScanMode.Balanced; //버그 때문에 삭제하였다.
                 adapter.DeviceDiscovered += (obj, a) =>
                 {
                     if (!list.Contains(a.Device))
